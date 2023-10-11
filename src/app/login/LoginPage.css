@@ -1,0 +1,36 @@
+.mainheading{
+    text-align: center;
+    font-weight: 700;
+    font-size: 3rem;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+
+.logAuth{
+    margin-top: 4rem;
+}
+
+button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 39.5%;
+    border: 1px solid grey;
+    width: 20rem;
+    height: 3.5rem;
+    font-weight: 500;
+    font-size: 1.4rem;
+    cursor: pointer;
+    margin-top: 3rem;
+    border-radius: 6px;
+}
+
+button:hover{
+    background-color: rgb(245, 250, 255);
+}
+
+.footLine{
+    color: rgb(28, 167, 93);
+    text-align: center;
+    margin-top: 1rem;
+}
