@@ -7,7 +7,7 @@ import LoginPage from './LoginPage'
 
 const Login = () => {
     const session = useSession();
-    console.log(session);
+    // console.log(session);
     
     if(session.status === "loading"){
       return <p className='loading'>

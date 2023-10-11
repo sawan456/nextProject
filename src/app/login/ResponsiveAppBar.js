@@ -13,13 +13,6 @@ function ResponsiveAppBar() {
   
   const session = useSession();  
 
-  const settings = [
-                    <p style={{fontSize:"1.4rem",fontStyle:"italic",marginLeft:"65%"}}>{session.data.user.name}</p>,
-                    <Button style={{cursor:"pointer"}} variant="outlined" color="error"
-                    onClick={()=>signOut("google")}
-                    >LogOut</Button>
-                ];
-
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
   const handleOpenUserMenu = (event) => {
@@ -55,11 +48,17 @@ function ResponsiveAppBar() {
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-              {settings.map((val,setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
+              
+                    <Typography textAlign="center" style={{fontSize:"1.4rem",fontStyle:"italic"}}>{session.data.user.name}</Typography>
+                  <MenuItem onClick={handleCloseUserMenu}>
+                  
+                  <Typography textAlign="center">
+                    <Button style={{cursor:"pointer"}} variant="outlined" color="error"
+                    onClick={()=>signOut("google")}
+                    >LogOut</Button>
+                  </Typography>
+                  </MenuItem>
+                
             </Menu>
           </Box>
       </>
